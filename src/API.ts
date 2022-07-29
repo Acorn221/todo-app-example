@@ -1,4 +1,5 @@
 /* tslint:disable */
+/* eslint-disable */
 //  This file was automatically generated and should not be edited.
 
 export type CreateTodoInput = {
@@ -55,6 +56,15 @@ export type ModelSizeInput = {
   between?: Array< number | null > | null,
 };
 
+export type Todo = {
+  __typename: "Todo",
+  id: string,
+  name: string,
+  description?: string | null,
+  createdAt: string,
+  updatedAt: string,
+};
+
 export type UpdateTodoInput = {
   id: string,
   name?: string | null,
@@ -62,7 +72,7 @@ export type UpdateTodoInput = {
 };
 
 export type DeleteTodoInput = {
-  id?: string | null,
+  id: string,
 };
 
 export type ModelTodoFilterInput = {
@@ -90,17 +100,25 @@ export type ModelIDInput = {
   size?: ModelSizeInput | null,
 };
 
+export type ModelTodoConnection = {
+  __typename: "ModelTodoConnection",
+  items:  Array<Todo | null >,
+  nextToken?: string | null,
+};
+
 export type CreateTodoMutationVariables = {
   input: CreateTodoInput,
   condition?: ModelTodoConditionInput | null,
 };
 
 export type CreateTodoMutation = {
-  createTodo:  {
+  createTodo?:  {
     __typename: "Todo",
     id: string,
     name: string,
-    description: string | null,
+    description?: string | null,
+    createdAt: string,
+    updatedAt: string,
   } | null,
 };
 
@@ -110,11 +128,13 @@ export type UpdateTodoMutationVariables = {
 };
 
 export type UpdateTodoMutation = {
-  updateTodo:  {
+  updateTodo?:  {
     __typename: "Todo",
     id: string,
     name: string,
-    description: string | null,
+    description?: string | null,
+    createdAt: string,
+    updatedAt: string,
   } | null,
 };
 
@@ -124,11 +144,13 @@ export type DeleteTodoMutationVariables = {
 };
 
 export type DeleteTodoMutation = {
-  deleteTodo:  {
+  deleteTodo?:  {
     __typename: "Todo",
     id: string,
     name: string,
-    description: string | null,
+    description?: string | null,
+    createdAt: string,
+    updatedAt: string,
   } | null,
 };
 
@@ -137,11 +159,13 @@ export type GetTodoQueryVariables = {
 };
 
 export type GetTodoQuery = {
-  getTodo:  {
+  getTodo?:  {
     __typename: "Todo",
     id: string,
     name: string,
-    description: string | null,
+    description?: string | null,
+    createdAt: string,
+    updatedAt: string,
   } | null,
 };
 
@@ -152,41 +176,49 @@ export type ListTodosQueryVariables = {
 };
 
 export type ListTodosQuery = {
-  listTodos:  {
+  listTodos?:  {
     __typename: "ModelTodoConnection",
     items:  Array< {
       __typename: "Todo",
       id: string,
       name: string,
-      description: string | null,
-    } | null > | null,
-    nextToken: string | null,
+      description?: string | null,
+      createdAt: string,
+      updatedAt: string,
+    } | null >,
+    nextToken?: string | null,
   } | null,
 };
 
 export type OnCreateTodoSubscription = {
-  onCreateTodo:  {
+  onCreateTodo?:  {
     __typename: "Todo",
     id: string,
     name: string,
-    description: string | null,
+    description?: string | null,
+    createdAt: string,
+    updatedAt: string,
   } | null,
 };
 
 export type OnUpdateTodoSubscription = {
-  onUpdateTodo:  {
+  onUpdateTodo?:  {
     __typename: "Todo",
     id: string,
     name: string,
-    description: string | null,
+    description?: string | null,
+    createdAt: string,
+    updatedAt: string,
   } | null,
 };
 
 export type OnDeleteTodoSubscription = {
-  onDeleteTodo:  {
+  onDeleteTodo?:  {
     __typename: "Todo",
     id: string,
     name: string,
-    description: string | null,
+    description?: string | null,
+    createdAt: string,
+    updatedAt: string,
   } | null,
 };
