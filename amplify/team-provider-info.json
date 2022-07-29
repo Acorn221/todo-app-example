@@ -14,6 +14,12 @@
     "categories": {
       "auth": {
         "tsamplifyapitodoexam2d73a25c": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d6pk2gls6m65x",
+          "type": "manual"
+        }
       }
     }
   }
